@@ -12,8 +12,8 @@ class FooterView: UIView {
     
     //MARK: - PROPERTIES
     //outlets
-    @IBOutlet var footerView: FooterView!
-    
+    @IBOutlet var contentView: FooterView!
+    @IBOutlet weak var bottomView: UIView!
     
     //variables
     
@@ -30,19 +30,19 @@ class FooterView: UIView {
     }
     
     private func setupUI() {
-        footerView.addLayerEffects(with: UIColor(named: "boaderClr"), borderWidth: 1, cornerRadius: 30)
+        bottomView.addLayerEffects(with: UIColor(named: "boaderClr"), borderWidth: 1, cornerRadius: 30)
     }
     
     
     private func commonInit() {
         let bundle = Bundle(for: FooterView.self)
         bundle.loadNibNamed("FooterView", owner: self)
-        footerView.fixInView(self)
+        contentView.fixInView(self)
     }
     
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: 100)
+        return CGSize(width: UIView.noIntrinsicMetric, height: 118)
     }
     
 }

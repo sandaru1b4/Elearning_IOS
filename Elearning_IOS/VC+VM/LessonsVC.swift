@@ -17,7 +17,7 @@ class LessonsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //variables
-    var videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    var videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
     var player = AVPlayer()
     var playerController = AVPlayerViewController()
     var playPauseButton: PlayPauseButton!
@@ -129,7 +129,7 @@ extension LessonsVC:UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = "Test"
-        cell.backgroundColor = .red
+        cell.backgroundColor = .gray
         return cell
     }
     
