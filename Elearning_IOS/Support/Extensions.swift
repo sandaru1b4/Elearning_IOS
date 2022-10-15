@@ -41,7 +41,7 @@ extension UIView {
 
 
 extension NSObject {
-
+    
     class var className: String {
         return String(describing: self)
     }
@@ -49,7 +49,7 @@ extension NSObject {
 
 
 extension UIView {
-
+    
     func addCornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
     }
@@ -62,10 +62,10 @@ extension UIView {
     }
     
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-         let mask = CAShapeLayer()
-         mask.path = path.cgPath
-         self.layer.mask = mask
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
     }
     
     func addShadowWithRoundCornersHeightOffset(offSet: CGFloat = 2.0, color: UIColor = .lightGray, radious: CGFloat = 0.0, shadowRadious: CGFloat = 5.0) {
@@ -85,5 +85,30 @@ extension UIView {
         self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
     }
+    
+}
 
+
+extension UIView
+{
+    func fixInView(_ container: UIView!) -> Void{
+        self.translatesAutoresizingMaskIntoConstraints = false;
+        self.frame = container.frame;
+        container.addSubview(self);
+        
+        NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+        
+    }
+}
+
+
+extension String {
+    func strikeThrough() -> NSAttributedString {
+        let attributeString =  NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
+        return attributeString
+    }
 }

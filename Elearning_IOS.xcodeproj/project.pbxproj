@@ -20,6 +20,7 @@
 		8441AA9C28FAADFE005884E0 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8441AA9B28FAADFE005884E0 /* Urbanist-SemiBold.ttf */; };
 		8441AA9E28FAB005005884E0 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8441AA9D28FAB005005884E0 /* Urbanist-Medium.ttf */; };
 		8441AAA028FABD06005884E0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441AA9F28FABD06005884E0 /* HeaderView.swift */; };
+		84B46BA028FAFC0C0057EF1A /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B46B9F28FAFC0C0057EF1A /* FooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8441AA9B28FAADFE005884E0 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
 		8441AA9D28FAB005005884E0 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Medium.ttf"; sourceTree = "<group>"; };
 		8441AA9F28FABD06005884E0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		84B46B9F28FAFC0C0057EF1A /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		842E15F628FA62B80050F003 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				84B46B9E28FAFBF10057EF1A /* Footer */,
 				8441AA9828FAABF1005884E0 /* Header */,
 			);
 			path = XIBs;
@@ -150,6 +153,14 @@
 				8441AA9F28FABD06005884E0 /* HeaderView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		84B46B9E28FAFBF10057EF1A /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				84B46B9F28FAFC0C0057EF1A /* FooterView.xib */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842E15EB28FA60E30050F003 /* LaunchScreen.storyboard in Resources */,
+				84B46BA028FAFC0C0057EF1A /* FooterView.xib in Resources */,
 				8441AA9A28FAAC0C005884E0 /* HeaderView.xib in Resources */,
 				8441AA9E28FAB005005884E0 /* Urbanist-Medium.ttf in Resources */,
 				842E15E828FA60E30050F003 /* Assets.xcassets in Resources */,
