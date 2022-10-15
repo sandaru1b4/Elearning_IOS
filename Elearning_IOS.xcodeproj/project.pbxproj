@@ -14,6 +14,8 @@
 		842E15E828FA60E30050F003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E15E728FA60E30050F003 /* Assets.xcassets */; };
 		842E15EB28FA60E30050F003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E15E928FA60E30050F003 /* LaunchScreen.storyboard */; };
 		842E15F928FA633F0050F003 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15F828FA633F0050F003 /* Extensions.swift */; };
+		842E15FC28FA7CF10050F003 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15FB28FA7CF10050F003 /* PlayPauseButton.swift */; };
+		842E15FF28FA85AE0050F003 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		842E15EA28FA60E30050F003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842E15EC28FA60E30050F003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842E15F828FA633F0050F003 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		842E15FB28FA7CF10050F003 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				842E15F328FA625F0050F003 /* Application */,
 				842E15F528FA629C0050F003 /* Storyboards */,
 				842E15F428FA62700050F003 /* VC+VM */,
+				842E15FA28FA7CC10050F003 /* UIViews */,
 				842E15F628FA62B80050F003 /* XIBs */,
 				842E15F728FA62E90050F003 /* Support */,
 				842E15E728FA60E30050F003 /* Assets.xcassets */,
@@ -105,9 +110,26 @@
 		842E15F728FA62E90050F003 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				842E15FD28FA856D0050F003 /* Fonts */,
 				842E15F828FA633F0050F003 /* Extensions.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		842E15FA28FA7CC10050F003 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				842E15FB28FA7CF10050F003 /* PlayPauseButton.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		842E15FD28FA856D0050F003 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +193,7 @@
 				842E15EB28FA60E30050F003 /* LaunchScreen.storyboard in Resources */,
 				842E15E828FA60E30050F003 /* Assets.xcassets in Resources */,
 				842E15E628FA60E10050F003 /* Main.storyboard in Resources */,
+				842E15FF28FA85AE0050F003 /* Urbanist-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +207,7 @@
 				842E15E328FA60E10050F003 /* LessonsVC.swift in Sources */,
 				842E15DF28FA60E10050F003 /* AppDelegate.swift in Sources */,
 				842E15E128FA60E10050F003 /* SceneDelegate.swift in Sources */,
+				842E15FC28FA7CF10050F003 /* PlayPauseButton.swift in Sources */,
 				842E15F928FA633F0050F003 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
