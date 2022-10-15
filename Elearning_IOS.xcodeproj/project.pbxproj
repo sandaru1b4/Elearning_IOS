@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		842E15DF28FA60E10050F003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15DE28FA60E10050F003 /* AppDelegate.swift */; };
 		842E15E128FA60E10050F003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15E028FA60E10050F003 /* SceneDelegate.swift */; };
-		842E15E328FA60E10050F003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15E228FA60E10050F003 /* ViewController.swift */; };
+		842E15E328FA60E10050F003 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15E228FA60E10050F003 /* LessonsVC.swift */; };
 		842E15E628FA60E10050F003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E15E428FA60E10050F003 /* Main.storyboard */; };
 		842E15E828FA60E30050F003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E15E728FA60E30050F003 /* Assets.xcassets */; };
 		842E15EB28FA60E30050F003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E15E928FA60E30050F003 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		842E15DB28FA60E10050F003 /* Elearning_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elearning_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842E15DE28FA60E10050F003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842E15E028FA60E10050F003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		842E15E228FA60E10050F003 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		842E15E228FA60E10050F003 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
 		842E15E528FA60E10050F003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		842E15E728FA60E30050F003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842E15EA28FA60E30050F003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		842E15F428FA62700050F003 /* VC+VM */ = {
 			isa = PBXGroup;
 			children = (
-				842E15E228FA60E10050F003 /* ViewController.swift */,
+				842E15E228FA60E10050F003 /* LessonsVC.swift */,
 				842E15E428FA60E10050F003 /* Main.storyboard */,
 			);
 			path = "VC+VM";
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842E15E328FA60E10050F003 /* ViewController.swift in Sources */,
+				842E15E328FA60E10050F003 /* LessonsVC.swift in Sources */,
 				842E15DF28FA60E10050F003 /* AppDelegate.swift in Sources */,
 				842E15E128FA60E10050F003 /* SceneDelegate.swift in Sources */,
 				842E15F928FA633F0050F003 /* Extensions.swift in Sources */,
@@ -333,8 +333,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Elearning_IOS/Application/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -360,8 +361,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Elearning_IOS/Application/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
