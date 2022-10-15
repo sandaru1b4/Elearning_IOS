@@ -83,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				842E15E228FA60E10050F003 /* LessonsVC.swift */,
-				842E15E428FA60E10050F003 /* Main.storyboard */,
 			);
 			path = "VC+VM";
 			sourceTree = "<group>";
@@ -91,6 +90,7 @@
 		842E15F528FA629C0050F003 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				842E15E428FA60E10050F003 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
