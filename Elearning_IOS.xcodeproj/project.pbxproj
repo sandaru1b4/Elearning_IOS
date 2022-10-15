@@ -16,6 +16,10 @@
 		842E15F928FA633F0050F003 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15F828FA633F0050F003 /* Extensions.swift */; };
 		842E15FC28FA7CF10050F003 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E15FB28FA7CF10050F003 /* PlayPauseButton.swift */; };
 		842E15FF28FA85AE0050F003 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */; };
+		8441AA9A28FAAC0C005884E0 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8441AA9928FAAC0C005884E0 /* HeaderView.xib */; };
+		8441AA9C28FAADFE005884E0 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8441AA9B28FAADFE005884E0 /* Urbanist-SemiBold.ttf */; };
+		8441AA9E28FAB005005884E0 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8441AA9D28FAB005005884E0 /* Urbanist-Medium.ttf */; };
+		8441AAA028FABD06005884E0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441AA9F28FABD06005884E0 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		842E15F828FA633F0050F003 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		842E15FB28FA7CF10050F003 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		8441AA9928FAAC0C005884E0 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		8441AA9B28FAADFE005884E0 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
+		8441AA9D28FAB005005884E0 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Medium.ttf"; sourceTree = "<group>"; };
+		8441AA9F28FABD06005884E0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		842E15F628FA62B80050F003 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				8441AA9828FAABF1005884E0 /* Header */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -127,9 +136,20 @@
 		842E15FD28FA856D0050F003 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8441AA9B28FAADFE005884E0 /* Urbanist-SemiBold.ttf */,
+				8441AA9D28FAB005005884E0 /* Urbanist-Medium.ttf */,
 				842E15FE28FA85AE0050F003 /* Urbanist-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8441AA9828FAABF1005884E0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				8441AA9928FAAC0C005884E0 /* HeaderView.xib */,
+				8441AA9F28FABD06005884E0 /* HeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				842E15EB28FA60E30050F003 /* LaunchScreen.storyboard in Resources */,
+				8441AA9A28FAAC0C005884E0 /* HeaderView.xib in Resources */,
+				8441AA9E28FAB005005884E0 /* Urbanist-Medium.ttf in Resources */,
 				842E15E828FA60E30050F003 /* Assets.xcassets in Resources */,
+				8441AA9C28FAADFE005884E0 /* Urbanist-SemiBold.ttf in Resources */,
 				842E15E628FA60E10050F003 /* Main.storyboard in Resources */,
 				842E15FF28FA85AE0050F003 /* Urbanist-Bold.ttf in Resources */,
 			);
@@ -205,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842E15E328FA60E10050F003 /* LessonsVC.swift in Sources */,
+				8441AAA028FABD06005884E0 /* HeaderView.swift in Sources */,
 				842E15DF28FA60E10050F003 /* AppDelegate.swift in Sources */,
 				842E15E128FA60E10050F003 /* SceneDelegate.swift in Sources */,
 				842E15FC28FA7CF10050F003 /* PlayPauseButton.swift in Sources */,

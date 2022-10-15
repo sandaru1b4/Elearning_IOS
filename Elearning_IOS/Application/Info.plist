@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Urbanist-Bold.ttf</string>
+		<string>Urbanist-SemiBold.ttf</string>
+		<string>Urbanist-Medium.ttf</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
