@@ -67,11 +67,25 @@ class PlayPauseButton: UIView {
     }
     
     private func setBackgroundImage(name: String) {
-        UIGraphicsBeginImageContext(frame.size)
-        UIImage(named: name)?.draw(in: bounds)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
-        UIGraphicsEndImageContext()
-        backgroundColor = UIColor(patternImage: image)
+        DispatchQueue.main.async {
+            UIGraphicsBeginImageContext(self.frame.size)
+            
+            if let uiImage =  UIImage(named: name) {
+                uiImage.draw(in: self.bounds)
+            }
+            guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+                print("❌error: image not found")
+                return }
+            UIGraphicsEndImageContext()
+            
+            //set play pause button opacity
+            if name == "ic_pause" {
+                self.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.5)
+            } else {
+                self.backgroundColor = UIColor(patternImage: image)
+            }
+            
+        }
     }
     
     private func handleRateChanged() {
