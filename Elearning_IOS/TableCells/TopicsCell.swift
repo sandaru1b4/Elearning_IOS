@@ -17,6 +17,26 @@ class TopicsCell: UITableViewCell {
     @IBOutlet weak var durationLbl: UILabel!
     @IBOutlet weak var btnImg: UIImageView!
     
+    //variables
+    var isUnlocked: Bool = false
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        checkStatus()
+        containerView.addShadowWithRoundCornersHeightOffset(offSet: 0, radious: 16,shadowRadious: 15, shadowOpacity: 0.3)
+        
+    }
+    
+    
+    //check lesson status
+    func checkStatus() {
+        if isUnlocked {
+            btnImg.image = UIImage(named: "ic_play")
+        }else{
+            btnImg.image = UIImage(named: "ic_lock")
+        }
+    }
     
 }

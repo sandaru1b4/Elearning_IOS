@@ -21,6 +21,11 @@ class LessonsVC: UIViewController {
     var player = AVPlayer()
     var playerController = AVPlayerViewController()
     var playPauseButton: PlayPauseButton!
+    var sectionLessonData: [Int: [LessonsInfo]] = [
+        0: DummyData.section1,
+        1: DummyData.section2,
+        2: DummyData.section3
+    ]
     
     
     override func viewDidLoad() {
@@ -84,7 +89,7 @@ class LessonsVC: UIViewController {
         if #available(iOS 15, *) {
             tableView.sectionHeaderTopPadding = 0
         }
-        tableView.sectionHeaderHeight = 70
+        tableView.sectionHeaderHeight = 46
         tableView.sectionFooterHeight = 0.0
         
         setupTableViewHeader()
@@ -138,6 +143,7 @@ class LessonsVC: UIViewController {
 
 //MARK: - table view
 extension LessonsVC:UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //selected row
     }
@@ -151,7 +157,7 @@ extension LessonsVC:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 70
+        return 46
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -166,12 +172,21 @@ extension LessonsVC:UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return sectionLessonData[section]!.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TopicsCell", for: indexPath) as! TopicsCell
+        
+        if let sectionData = sectionLessonData[indexPath.section]?[indexPath.row] {
+            cell.lessonNumLbl.text = sectionData.lessionNum
+            cell.titleLbl.text = sectionData.title
+            cell.durationLbl.text = "\(sectionData.duration) mins"
+            cell.isUnlocked = sectionData.isUnlocked
+            cell.checkStatus()
+        }
         return cell
     }
     
