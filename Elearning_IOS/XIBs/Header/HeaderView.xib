@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -196,11 +197,11 @@
                                     <color key="textColor" red="0.25882357360000002" green="0.25882357360000002" blue="0.25882357360000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPW-2X-WbS">
+                                <button opaque="NO" contentMode="right" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPW-2X-WbS">
                                     <rect key="frame" x="481.33333333333331" y="0.0" width="74.666666666666686" height="33.333333333333336"/>
                                     <color key="tintColor" red="0.2403300703" green="0.36337319019999997" blue="0.9333820343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="See All">
+                                    <buttonConfiguration key="configuration" style="plain" title="See All" titleAlignment="trailing">
                                         <fontDescription key="titleFontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                     </buttonConfiguration>
                                 </button>
@@ -208,6 +209,8 @@
                         </stackView>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gVK-8Z-3t2" secondAttribute="trailing" id="FRT-1D-jgo"/>
+                        <constraint firstItem="gVK-8Z-3t2" firstAttribute="leading" secondItem="Qlp-LR-uSL" secondAttribute="leading" id="QX5-1t-c6X"/>
                         <constraint firstAttribute="trailing" secondItem="xhi-Vl-suU" secondAttribute="trailing" id="gOA-bE-Ojf"/>
                         <constraint firstItem="xhi-Vl-suU" firstAttribute="leading" secondItem="Qlp-LR-uSL" secondAttribute="leading" id="tpo-Er-54o"/>
                     </constraints>

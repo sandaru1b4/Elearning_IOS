@@ -96,14 +96,43 @@ E-Learning</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="starClr"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sectionId" id="TB8-xH-Zzb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sectionHeaderCell" id="TB8-xH-Zzb" customClass="SectionHeaderCell" customModule="Elearning_IOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99.333332061767578" width="390" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TB8-xH-Zzb" id="YeV-3c-oZE">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JHp-KS-I9h">
+                                                    <rect key="frame" x="24" y="12.333333333333334" width="342" height="19.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 1 - Introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sa-6b-GMH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="19.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
+                                                            <color key="textColor" red="0.38039216399999998" green="0.38039213420000001" blue="0.38039216399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkN-Ve-zXQ">
+                                                            <rect key="frame" x="289.66666666666669" y="0.0" width="52.333333333333314" height="19.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
+                                                            <color key="textColor" red="0.2403300703" green="0.36337319019999997" blue="0.9333820343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.99607855079999996" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="JHp-KS-I9h" firstAttribute="centerY" secondItem="YeV-3c-oZE" secondAttribute="centerY" id="SYn-FL-d0Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="JHp-KS-I9h" secondAttribute="trailing" constant="24" id="dUg-m5-8wI"/>
+                                                <constraint firstItem="JHp-KS-I9h" firstAttribute="leading" secondItem="YeV-3c-oZE" secondAttribute="leading" constant="24" id="hSu-Om-xoT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.67781637800000005" green="0.93261023279999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="sectionTitle" destination="1Sa-6b-GMH" id="7jh-EA-vRv"/>
+                                            <outlet property="timeLable" destination="rkN-Ve-zXQ" id="yVw-Qs-JEJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

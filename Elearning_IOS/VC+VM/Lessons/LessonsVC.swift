@@ -42,7 +42,7 @@ class LessonsVC: UIViewController {
     
     @objc func onBackButton_Clicked(sender: UIButton)
     {
-            navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     //strat cover video on view load
@@ -59,6 +59,7 @@ class LessonsVC: UIViewController {
         self.coverVideoView.addSubview(playerController.view)
         playerController.didMove(toParent: self)
         
+        ///observer to notify if currnt video ended
         NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnded), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         
         playPauseButton = PlayPauseButton()
@@ -71,8 +72,8 @@ class LessonsVC: UIViewController {
     //if video ended replay video
     @objc private func videoDidEnded() {
         playerController.dismiss(animated: true, completion: nil)
-            self.player.seek(to: CMTime.zero)
-            self.player.play()
+        self.player.seek(to: CMTime.zero)
+        self.player.play()
     }
     
     
@@ -89,7 +90,7 @@ class LessonsVC: UIViewController {
         
         setupTableViewHeader()
         setupTableViewFooter()
-      
+        
         
     }
     
@@ -139,7 +140,7 @@ class LessonsVC: UIViewController {
 //MARK: - table view
 extension LessonsVC:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        //selected row
     }
 }
 
@@ -149,14 +150,13 @@ extension LessonsVC:UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionId")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionHeaderCell")
         
         return cell
-  
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
