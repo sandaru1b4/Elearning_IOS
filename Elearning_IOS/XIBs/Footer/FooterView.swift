@@ -42,7 +42,7 @@ class FooterView: UIView {
     
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: 118)
+        return CGSize(width: UIView.noIntrinsicMetric, height: 168)
     }
     
 }

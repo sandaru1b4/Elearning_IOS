@@ -36,6 +36,7 @@ class TopicsCell: UITableViewCell {
             btnImg.image = UIImage(named: "ic_play")
         }else{
             btnImg.image = UIImage(named: "ic_lock")
+            btnImg.tintColor = UIColor(named: "secondaryClr")
         }
     }
     
