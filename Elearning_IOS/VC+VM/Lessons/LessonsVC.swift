@@ -21,7 +21,6 @@ class LessonsVC: UIViewController {
     var player = AVPlayer()
     var playerController = AVPlayerViewController()
     var playPauseButton: PlayPauseButton!
-    let cellId = "cellId"
     
     
     override func viewDidLoad() {
@@ -147,30 +146,32 @@ extension LessonsVC:UITableViewDelegate {
 
 extension LessonsVC:UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        DummyData.lessionSection.count
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionHeaderCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionHeaderCell") as! SectionHeaderCell
+        cell.sectionTitle.text = "Section \(DummyData.lessionSection[section].id) - \(DummyData.lessionSection[section].title)"
+        cell.timeLable.text = "\(DummyData.lessionSection[section].duration) mins"
         
         return cell
         
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        4
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
-        cell.textLabel?.text = "Test"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TopicsCell", for: indexPath) as! TopicsCell
         return cell
     }
     

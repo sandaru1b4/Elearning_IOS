@@ -33,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Qlp-LR-uSL">
-                    <rect key="frame" x="24" y="24" width="556" height="278"/>
+                    <rect key="frame" x="24" y="24" width="556" height="302"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BuO-ly-P76">
                             <rect key="frame" x="0.0" y="0.0" width="556" height="165"/>
@@ -182,14 +182,14 @@
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhi-Vl-suU" userLabel="HorizontalLineView">
-                            <rect key="frame" x="0.0" y="204.33333333333334" width="556" height="1"/>
+                            <rect key="frame" x="0.0" y="216.33333333333334" width="556" height="1"/>
                             <color key="backgroundColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="KgQ-oW-lol"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-8Z-3t2">
-                            <rect key="frame" x="0.0" y="244.66666666666671" width="556" height="33.333333333333343"/>
+                            <rect key="frame" x="0.0" y="268.66666666666669" width="556" height="33.333333333333314"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="124 Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DV-iJ-xtq">
                                     <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="33.333333333333336"/>
@@ -219,7 +219,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Qlp-LR-uSL" secondAttribute="bottom" constant="24" id="S2Q-sm-bX8"/>
+                <constraint firstAttribute="bottom" secondItem="Qlp-LR-uSL" secondAttribute="bottom" id="S2Q-sm-bX8"/>
                 <constraint firstAttribute="trailing" secondItem="Qlp-LR-uSL" secondAttribute="trailing" constant="24" id="lmj-6d-1QL"/>
                 <constraint firstItem="Qlp-LR-uSL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="rTI-mG-VMV"/>
                 <constraint firstItem="Qlp-LR-uSL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="sYc-jy-aHH"/>
