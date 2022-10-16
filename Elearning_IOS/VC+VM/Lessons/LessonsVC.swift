@@ -17,7 +17,7 @@ class LessonsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //variables
-    var videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    var videoUrl = "http://techslides.com/demos/sample-videos/small.mp4"
     var player = AVPlayer()
     var playerController = AVPlayerViewController()
     var playPauseButton: PlayPauseButton!
@@ -28,6 +28,21 @@ class LessonsVC: UIViewController {
         super.viewDidLoad()
         startVideo()
         setupTableView()
+        self.navigationItem.hidesBackButton = true
+        let leftButton = UIButton(type: UIButton.ButtonType.custom)
+        leftButton.clipsToBounds = true
+        leftButton.setImage(UIImage(named: "ic_back"), for: .normal) // add custom image
+        leftButton.addTarget(self, action: #selector(onBackButton_Clicked), for: UIControl.Event.touchUpInside)
+        leftButton.tintColor = .white
+        let leftBarButton = UIBarButtonItem()
+        leftBarButton.customView = leftButton
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    
+    @objc func onBackButton_Clicked(sender: UIButton)
+    {
+            navigationController?.popViewController(animated: true)
     }
     
     //strat cover video on view load
@@ -43,6 +58,9 @@ class LessonsVC: UIViewController {
         addChild(playerController)
         self.coverVideoView.addSubview(playerController.view)
         playerController.didMove(toParent: self)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnded), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        
         playPauseButton = PlayPauseButton()
         playPauseButton.avPlayer = player
         self.coverVideoView.addSubview(playPauseButton)
@@ -50,13 +68,28 @@ class LessonsVC: UIViewController {
         
     }
     
+    //if video ended replay video
+    @objc private func videoDidEnded() {
+        playerController.dismiss(animated: true, completion: nil)
+            self.player.seek(to: CMTime.zero)
+            self.player.play()
+    }
+    
+    
     private func setupTableView() {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        
+        if #available(iOS 15, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
+        tableView.sectionHeaderHeight = 70
+        tableView.sectionFooterHeight = 0.0
+        
         setupTableViewHeader()
         setupTableViewFooter()
+      
         
     }
     
@@ -114,22 +147,30 @@ extension LessonsVC:UITableViewDelegate {
 extension LessonsVC:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        return 70
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionId")
+        
+        return cell
+  
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        content.text = "Test"
-        cell.backgroundColor = .gray
+        
+        cell.textLabel?.text = "Test"
         return cell
     }
     

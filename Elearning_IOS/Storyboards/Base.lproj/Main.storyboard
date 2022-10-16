@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIP-7t-B5h">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Urbanist-Bold.ttf">
+            <string>Urbanist-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--StartVC-->
+        <scene sceneID="toT-wU-n2J">
+            <objects>
+                <viewController id="Tzm-xK-fRu" customClass="StartVC" customModule="Elearning_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sjC-4H-OwS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOc-b0-fgO">
+                                <rect key="frame" x="111.00000000000001" y="383.66666666666669" width="168.33333333333337" height="77"/>
+                                <string key="text">Welcome to
+E-Learning</string>
+                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="32"/>
+                                <color key="textColor" name="primaryClr"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avy-sp-BBQ">
+                                <rect key="frame" x="70" y="730" width="250" height="50"/>
+                                <color key="backgroundColor" name="primaryClr"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vqg-Lz-v6b"/>
+                                </constraints>
+                                <color key="tintColor" red="0.93333333730000001" green="0.93333333730000001" blue="0.93333333730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Watch Lessons">
+                                    <fontDescription key="titleFontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="17"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6iu-y0-SUl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gwf-Am-1h7"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="XOc-b0-fgO" firstAttribute="centerY" secondItem="sjC-4H-OwS" secondAttribute="centerY" id="PhA-cH-TBn"/>
+                            <constraint firstItem="Gwf-Am-1h7" firstAttribute="bottom" secondItem="Avy-sp-BBQ" secondAttribute="bottom" constant="30" id="c7O-xj-DgO"/>
+                            <constraint firstItem="Avy-sp-BBQ" firstAttribute="leading" secondItem="Gwf-Am-1h7" secondAttribute="leading" constant="70" id="fxD-av-hLG"/>
+                            <constraint firstItem="Gwf-Am-1h7" firstAttribute="trailing" secondItem="Avy-sp-BBQ" secondAttribute="trailing" constant="70" id="lti-YN-Wo7"/>
+                            <constraint firstItem="XOc-b0-fgO" firstAttribute="centerX" secondItem="sjC-4H-OwS" secondAttribute="centerX" id="mRW-dx-922"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3m6-MF-eA4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDw-E3-ids" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106.15384615384615" y="-6.3981042654028437"/>
+        </scene>
         <!--LessonsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,9 +83,29 @@
                                     <constraint firstAttribute="height" constant="300" id="HaI-OL-K4E"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-Bx-Ojl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-Bx-Ojl">
                                 <rect key="frame" x="0.0" y="300" width="390" height="544"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" id="YA4-8L-oW5">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YA4-8L-oW5" id="11a-6e-nVA">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="starClr"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sectionId" id="TB8-xH-Zzb">
+                                        <rect key="frame" x="0.0" y="99.333332061767578" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TB8-xH-Zzb" id="YeV-3c-oZE">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.67781637800000005" green="0.93261023279999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +120,7 @@
                             <constraint firstAttribute="trailing" secondItem="dpA-Bx-Ojl" secondAttribute="trailing" id="sHb-MS-yCp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HPP-Zy-Vzf"/>
                     <connections>
                         <outlet property="coverVideoView" destination="5yc-ng-q06" id="uzz-0l-P47"/>
                         <outlet property="tableView" destination="dpA-Bx-Ojl" id="MZi-eK-DzH"/>
@@ -47,15 +128,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="969.23076923076917" y="-2.1327014218009479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="deM-Nc-As7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QIP-7t-B5h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DuZ-vI-jRS">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tzm-xK-fRu" kind="relationship" relationship="rootViewController" id="OIO-3Y-Z0k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qj-ha-Obc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823.07692307692309" y="-6.3981042654028437"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="primaryClr">
+            <color red="0.23921568627450981" green="0.36078431372549019" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="starClr">
+            <color red="0.93725490196078431" green="0.63921568627450975" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
