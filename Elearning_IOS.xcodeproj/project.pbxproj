@@ -29,9 +29,12 @@
 		84B46BA228FAFF7D0057EF1A /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B46BA128FAFF7D0057EF1A /* FooterView.swift */; };
 		84B46BA428FC2F120057EF1A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B46BA328FC2F120057EF1A /* StartVC.swift */; };
 		84B46BAC28FC4EEA0057EF1A /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B46BAB28FC4EEA0057EF1A /* SectionHeaderCell.swift */; };
+		FC2584880F05CA1F94985D80 /* Pods_Elearning_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F6EB4596C3A75041164F5 /* Pods_Elearning_IOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D8F6EB4596C3A75041164F5 /* Pods_Elearning_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elearning_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369DD9C60F7670B64C19F419 /* Pods-Elearning_IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elearning_IOS.debug.xcconfig"; path = "Target Support Files/Pods-Elearning_IOS/Pods-Elearning_IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		842E15DB28FA60E10050F003 /* Elearning_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elearning_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842E15DE28FA60E10050F003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842E15E028FA60E10050F003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		84B46BA128FAFF7D0057EF1A /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		84B46BA328FC2F120057EF1A /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		84B46BAB28FC4EEA0057EF1A /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
+		C91B20D840F21C68D43F1DB6 /* Pods-Elearning_IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elearning_IOS.release.xcconfig"; path = "Target Support Files/Pods-Elearning_IOS/Pods-Elearning_IOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +67,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2584880F05CA1F94985D80 /* Pods_Elearning_IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1407F7E4A3BCFA4B1F64B75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F6EB4596C3A75041164F5 /* Pods_Elearning_IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		791059A13CE4C945BDD78D0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				369DD9C60F7670B64C19F419 /* Pods-Elearning_IOS.debug.xcconfig */,
+				C91B20D840F21C68D43F1DB6 /* Pods-Elearning_IOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		842E15D228FA60E10050F003 = {
 			isa = PBXGroup;
 			children = (
 				842E15DD28FA60E10050F003 /* Elearning_IOS */,
 				842E15DC28FA60E10050F003 /* Products */,
+				791059A13CE4C945BDD78D0B /* Pods */,
+				1407F7E4A3BCFA4B1F64B75C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842E15EF28FA60E30050F003 /* Build configuration list for PBXNativeTarget "Elearning_IOS" */;
 			buildPhases = (
+				09E58DBA8D07A90E12281665 /* [CP] Check Pods Manifest.lock */,
 				842E15D728FA60E10050F003 /* Sources */,
 				842E15D828FA60E10050F003 /* Frameworks */,
 				842E15D928FA60E10050F003 /* Resources */,
+				543F05380209CAB13CD714A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +324,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09E58DBA8D07A90E12281665 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Elearning_IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543F05380209CAB13CD714A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Elearning_IOS/Pods-Elearning_IOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Elearning_IOS/Pods-Elearning_IOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Elearning_IOS/Pods-Elearning_IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		842E15D728FA60E10050F003 /* Sources */ = {
@@ -458,6 +527,7 @@
 		};
 		842E15F028FA60E30050F003 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 369DD9C60F7670B64C19F419 /* Pods-Elearning_IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -487,6 +557,7 @@
 		};
 		842E15F128FA60E30050F003 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91B20D840F21C68D43F1DB6 /* Pods-Elearning_IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

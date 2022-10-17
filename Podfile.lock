@@ -1,0 +1,30 @@
+PODS:
+  - RappleProgressHUD (4.1)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - RappleProgressHUD
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - RappleProgressHUD
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  RappleProgressHUD: f29bc5dc5f9834c2caa9c2ae21ba11f3ff2b5a85
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: 950c32d1c3bd204ff9f6e0f13339f5e3362178a8
+
+COCOAPODS: 1.11.3

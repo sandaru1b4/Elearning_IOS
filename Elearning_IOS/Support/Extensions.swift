@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RappleProgressHUD
 
 extension UIView {
     
@@ -111,4 +112,27 @@ extension String {
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
         return attributeString
     }
+}
+
+extension UIViewController {
+    //MARK: -  Activity Indicator
+    // Start loading
+    func startLoading() {
+        RappleActivityIndicatorView.startAnimating(attributes: RappleActivityIndicatorView.attribute(style: RappleStyle.apple, tintColor:  UIColor(named: "primaryClr")!, screenBG: UIColor(white: 0.0, alpha: 0.1) , progressBG: UIColor.clear))
+    }
+    
+    // Start loading with text
+    func startLoadingWithText(label: String) {
+        RappleActivityIndicatorView.startAnimatingWithLabel(label)
+    }
+    
+    // Stop loading
+    func stopLoading() {
+        RappleActivityIndicatorView.stopAnimation()
+    }
+    
+    func startLoadingWithProgress(current: CGFloat, total:CGFloat) {
+        RappleActivityIndicatorView.setProgress(current/total)
+    }
+    
 }
