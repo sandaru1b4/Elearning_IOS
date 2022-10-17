@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterView" customModule="Elearning_IOS" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="6Lb-Mw-pm6" id="puz-1J-whZ"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="56m-so-B6Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="168"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-Mw-pm6" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="50" width="358" height="118"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oa-d2-cua">
+                            <rect key="frame" x="24" y="24" width="310" height="58"/>
+                            <color key="backgroundColor" red="0.2403300703" green="0.36337319019999997" blue="0.9333820343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="58" id="WRJ-dm-4PN"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Enroll Course - $40">
+                                <fontDescription key="titleFontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2Oa-d2-cua" firstAttribute="top" secondItem="6Lb-Mw-pm6" secondAttribute="top" constant="24" id="Df2-9O-eTE"/>
+                        <constraint firstItem="2Oa-d2-cua" firstAttribute="leading" secondItem="6Lb-Mw-pm6" secondAttribute="leading" constant="24" id="S8V-hH-YJL"/>
+                        <constraint firstAttribute="height" constant="118" id="USw-5c-EPB"/>
+                        <constraint firstAttribute="trailing" secondItem="2Oa-d2-cua" secondAttribute="trailing" constant="24" id="pKb-Jt-mKL"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6Lb-Mw-pm6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="Hcg-mJ-qLk"/>
+                <constraint firstAttribute="trailing" secondItem="6Lb-Mw-pm6" secondAttribute="trailing" id="KeJ-SJ-3J5"/>
+                <constraint firstItem="6Lb-Mw-pm6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RF4-pG-6EV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="3.0769230769230766" y="-219.66824644549763"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
