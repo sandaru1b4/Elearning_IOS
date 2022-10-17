@@ -17,33 +17,25 @@ class LessonsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //variables
-    var videoUrl = "http://techslides.com/demos/sample-videos/small.mp4"
+    let vm =  LessionsVM()
     var player = AVPlayer()
     var playerController = AVPlayerViewController()
     var playPauseButton: PlayPauseButton!
-    var sectionLessonData: [Int: [LessonsInfo]] = [
-        0: DummyData.section1,
-        1: DummyData.section2,
-        2: DummyData.section3
-    ]
     
+    
+    deinit {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startVideo()
         setupTableView()
-        self.navigationItem.hidesBackButton = true
-        let leftButton = UIButton(type: UIButton.ButtonType.custom)
-        leftButton.clipsToBounds = true
-        leftButton.setImage(UIImage(named: "ic_back"), for: .normal) // add custom image
-        leftButton.addTarget(self, action: #selector(onBackButton_Clicked), for: UIControl.Event.touchUpInside)
-        leftButton.tintColor = .white
-        let leftBarButton = UIBarButtonItem()
-        leftBarButton.customView = leftButton
-        self.navigationItem.leftBarButtonItem = leftBarButton
+        defaultBackBtn()
     }
     
     
+    //back btn action
     @objc func onBackButton_Clicked(sender: UIButton)
     {
         navigationController?.popViewController(animated: true)
@@ -52,7 +44,7 @@ class LessonsVC: UIViewController {
     //strat cover video on view load
     func startVideo() {
         
-        guard let url = URL(string: videoUrl) else { return }
+        guard let url = URL(string: vm.videoUrl) else { return }
         player = AVPlayer(url: url)
         player.rate = 1
         playerController.player = player
@@ -137,6 +129,19 @@ class LessonsVC: UIViewController {
         
     }
     
+    
+    private func defaultBackBtn() {
+        self.navigationItem.hidesBackButton = true
+        let leftButton = UIButton(type: UIButton.ButtonType.custom)
+        leftButton.clipsToBounds = true
+        leftButton.setImage(UIImage(named: "ic_back"), for: .normal) // add custom image
+        leftButton.addTarget(self, action: #selector(onBackButton_Clicked), for: UIControl.Event.touchUpInside)
+        leftButton.tintColor = .white
+        let leftBarButton = UIBarButtonItem()
+        leftBarButton.customView = leftButton
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
 }
 
 
@@ -172,7 +177,7 @@ extension LessonsVC:UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionLessonData[section]!.count
+        return vm.sectionLessonData[section]!.count
     }
     
     
@@ -180,7 +185,7 @@ extension LessonsVC:UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TopicsCell", for: indexPath) as! TopicsCell
         
-        if let sectionData = sectionLessonData[indexPath.section]?[indexPath.row] {
+        if let sectionData = vm.sectionLessonData[indexPath.section]?[indexPath.row] {
             cell.lessonNumLbl.text = sectionData.lessionNum
             cell.titleLbl.text = sectionData.title
             cell.durationLbl.text = "\(sectionData.duration) mins"
